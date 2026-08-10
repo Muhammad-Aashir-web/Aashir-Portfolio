@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  /* Backgrounds */
+  --bg: #0b0d12;
+  --surface: #12151c;
+  --surface-hover: #171b24;
+  --border: #232833;
+
+  /* Text */
+  --fg: #e5e7eb;
+  --fg-muted: #8b93a7;
+  --fg-subtle: #565e6f;
+
+  /* Accent */
+  --accent: #3b82f6;
+  --accent-bright: #60a5fa;
+  --accent-dim: #1d4ed8;
+
+  /* Status (call-center domain colors, used functionally not decoratively) */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --critical: #ef4444;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-subtle: var(--fg-subtle);
+  --color-accent: var(--accent);
+  --color-accent-bright: var(--accent-bright);
+  --color-accent-dim: var(--accent-dim);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-critical: var(--critical);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+::selection {
+  background: var(--accent-dim);
+  color: var(--fg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
