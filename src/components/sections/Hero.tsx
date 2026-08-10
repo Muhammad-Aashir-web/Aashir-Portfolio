@@ -25,7 +25,7 @@ export default function Hero() {
           variants={fadeUp}
           className="font-mono text-xs tracking-widest text-accent-bright uppercase"
         >
-          AI Engineer — Agentic Systems
+          Building Agentic AI &amp; Automation Systems
         </motion.p>
 
         <motion.h1
