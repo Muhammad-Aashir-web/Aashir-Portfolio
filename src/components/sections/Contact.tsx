@@ -17,9 +17,10 @@ export default function Contact() {
           Let&apos;s build something that takes action.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-fg-muted">
-          I&apos;m currently looking for AI Automation Engineer and AI
-          Engineer roles. If you&apos;re hiring, or just want to talk about
-          agentic systems, reach out.
+        Open to full-time roles building agentic AI systems, and to select
+        automation projects for teams that want their workflows to actually
+        run themselves — not just get suggested. If either sounds like a
+        fit, let&apos;s talk.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

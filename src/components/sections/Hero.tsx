@@ -23,7 +23,17 @@ export default function Hero() {
           animate="visible"
           custom={0}
           variants={fadeUp}
-          className="font-mono text-xs tracking-widest text-accent-bright uppercase"
+          className="font-display text-base font-medium text-fg"
+        >
+          Muhammad Aashir
+        </motion.p>
+
+        <motion.p
+          initial="hidden"
+          animate="visible"
+          custom={1}
+          variants={fadeUp}
+          className="mt-2 font-mono text-xs tracking-widest text-accent-bright uppercase"
         >
           Building Agentic AI &amp; Automation Systems
         </motion.p>
@@ -31,7 +41,7 @@ export default function Hero() {
         <motion.h1
           initial="hidden"
           animate="visible"
-          custom={1}
+          custom={2}
           variants={fadeUp}
           className="mt-4 font-display text-4xl font-semibold leading-tight text-fg sm:text-5xl"
         >
@@ -41,7 +51,7 @@ export default function Hero() {
         <motion.p
           initial="hidden"
           animate="visible"
-          custom={2}
+          custom={3}
           variants={fadeUp}
           className="mt-5 text-base leading-relaxed text-fg-muted sm:text-lg"
         >
@@ -53,7 +63,7 @@ export default function Hero() {
         <motion.div
           initial="hidden"
           animate="visible"
-          custom={3}
+          custom={4}
           variants={fadeUp}
           className="mt-8 flex flex-wrap items-center gap-3"
         >
