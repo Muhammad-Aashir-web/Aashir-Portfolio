@@ -1,16 +1,17 @@
 import { pipelineNodes, VIEWBOX_WIDTH, VIEWBOX_HEIGHT } from "@/data/pipeline";
 
 // Hand-tuned edge paths connecting the agent nodes below.
-// Kept explicit (rather than derived) since this is a fixed, six-node
+// Kept explicit (rather than derived) since this is a fixed, seven-node
 // pipeline that mirrors the real LangGraph state graph — precision here
 // matters more than generality.
 const edges = [
-  { id: "intent-retrieval", d: "M105,54 C105,90 325,54 325,90" },
-  { id: "intent-escalation", d: "M105,54 L105,170" },
-  { id: "retrieval-suggestion", d: "M325,134 L325,170" },
-  { id: "suggestion-qa", d: "M325,214 C325,240 215,240 215,270" },
-  { id: "escalation-qa", d: "M105,214 C105,240 215,240 215,270" },
-  { id: "qa-aftercall", d: "M215,314 L215,350" },
+  { id: "transcription-intent", d: "M215,54 L215,90" },
+  { id: "intent-retrieval", d: "M215,134 C215,150 325,140 325,170" },
+  { id: "intent-escalation", d: "M215,134 C215,150 105,140 105,170" },
+  { id: "retrieval-suggestion", d: "M325,214 L325,250" },
+  { id: "suggestion-qa", d: "M325,294 C325,320 215,320 215,350" },
+  { id: "escalation-qa", d: "M105,214 C105,280 215,280 215,350" },
+  { id: "qa-aftercall", d: "M215,394 L215,430" },
 ];
 
 export default function AgentGraph() {
@@ -19,7 +20,7 @@ export default function AgentGraph() {
       viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
       className="h-auto w-full max-w-[430px]"
       role="img"
-      aria-label="Diagram of a six-agent pipeline: Intent Classification and Escalation Prediction run from an incoming call, feeding Knowledge Retrieval, Response Suggestion, a QA Agent, and finally After-Call Work."
+      aria-label="Diagram of a seven-agent pipeline: Real-Time Transcription feeds Intent Classification, which branches to a sequential Knowledge Retrieval and Response Suggestion path and a parallel Escalation Prediction path, both converging on a QA Agent and finally After-Call Work."
     >
       <defs>
         <filter id="nodeGlow" x="-40%" y="-40%" width="180%" height="180%">

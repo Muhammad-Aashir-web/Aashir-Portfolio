@@ -12,7 +12,7 @@ export const projects: Project[] = [
     slug: "call-center-automation",
     name: "AI Call Center Automation Platform",
     description:
-      "A six-agent LangGraph pipeline that classifies intent, retrieves knowledge, predicts escalation risk, and scores calls in real time.",
+      "A seven-agent LangGraph system that transcribes and analyzes calls live — classifying intent, retrieving knowledge, and predicting escalation risk in real time — then scores and summarizes every call automatically.",
     stack: ["LangGraph", "FastAPI", "Redis", "XGBoost"],
     status: "complete",
     featured: true,
