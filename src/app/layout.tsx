@@ -23,6 +23,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://aashir-portfolio-orcin.vercel.app"),
   title: "Muhammad Aashir — Building Agentic AI & Automation Systems",
   description:
     "I build agentic AI systems — multi-agent LangGraph pipelines with real backend integrations — that automate operational workflows like contract review and customer support.",
