@@ -29,8 +29,7 @@ export default function About() {
             That&apos;s where I actually learned something.
           </p>
           <p>
-            I&apos;m currently looking for my first role as an AI Automation
-            Engineer or AI Engineer, ideally somewhere building agentic
+            I&apos;m currently looking for AI Automation roles, ideally somewhere building agentic
             systems for real operational problems — not another chatbot
             wrapper.
           </p>
