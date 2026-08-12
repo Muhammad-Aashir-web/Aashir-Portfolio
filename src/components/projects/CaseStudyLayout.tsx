@@ -39,6 +39,18 @@ export default function CaseStudyLayout({ study }: { study: CaseStudy }) {
         )}
       </div>
 
+      {/* Team contribution disclosure, for group projects */}
+      {study.contribution && (
+        <div className="mt-8 rounded-xl border border-border bg-surface p-5">
+          <p className="font-mono text-[11px] uppercase tracking-wider text-warning">
+            Team Project — My Contribution
+          </p>
+          <p className="mt-2 text-sm leading-relaxed text-fg-muted">
+            {study.contribution}
+          </p>
+        </div>
+      )}
+
       {/* Problem */}
       <Section title="The Problem">
         <p>{study.problem}</p>

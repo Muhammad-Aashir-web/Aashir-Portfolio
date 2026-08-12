@@ -15,6 +15,7 @@ export type CaseStudy = {
   slug: string;
   name: string;
   tagline: string;
+  contribution?: string;
   problem: string;
   solution: string;
   architecture: string;

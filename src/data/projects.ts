@@ -30,8 +30,8 @@ export const projects: Project[] = [
     slug: "fundchain",
     name: "FundChain — Business Investment Platform on Solana",
     description:
-      "A milestone-driven crowdfunding platform on Solana with smart-contract escrow, tiered KYC, and an AI scam-detection model that screens every campaign.",
-    stack: ["Solana", "Rust/Anchor", "Supabase", "Python/AI"],
+      "A team-built Solana crowdfunding platform with milestone-based escrow. My contribution: AI scam/risk scoring, personalized recommendations, and the support chatbot.",
+    stack: ["Solana", "scikit-learn", "Supabase", "OpenRouter"],
     status: "complete",
     featured: true,
   },
