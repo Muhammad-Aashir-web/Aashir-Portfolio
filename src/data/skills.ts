@@ -25,10 +25,6 @@ export const skillCategories: SkillCategory[] = [
     skills: ["n8n", "DocuSign", "Salesforce", "OpenRouter"],
   },
   {
-    category: "Web3 & Blockchain",
-    skills: ["Solana", "Rust / Anchor", "Supabase", "Phantom Wallet"],
-  },
-  {
     category: "Frontend",
     skills: ["React", "TypeScript", "JavaScript", "Tailwind CSS"],
   },
