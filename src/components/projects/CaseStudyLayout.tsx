@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { CaseStudy } from "@/data/case-studies/types";
 import { GithubIcon } from "@/components/ui/BrandIcons";
@@ -64,6 +65,17 @@ export default function CaseStudyLayout({ study }: { study: CaseStudy }) {
       {/* Architecture */}
       <Section title="Architecture">
         <p>{study.architecture}</p>
+        {study.architectureDiagram && (
+          <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-surface">
+            <Image
+              src={study.architectureDiagram}
+              alt="Call center audio streams into live transcription, then split into intent classification, retrieval-grounded response suggestion, and escalation prediction, with session state shared in Redis and post-call QA and summary steps triggered after the call ends."
+              width={1600}
+              height={900}
+              className="h-auto w-full object-cover"
+            />
+          </div>
+        )}
       </Section>
 
       {/* Tech Stack */}
