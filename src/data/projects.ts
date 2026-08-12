@@ -21,7 +21,7 @@ export const projects: Project[] = [
     slug: "contract-analysis-engine",
     name: "Intelligent Contract Analysis & Compliance Engine",
     description:
-      "A six-agent contract review system combining RAG retrieval with DocuSign and Salesforce integrations for automated compliance checks.",
+      "A six-agent LangGraph pipeline that extracts clauses, checks compliance against GDPR/HIPAA/SOX/CCPA, scores risk, and drafts negotiation suggestions.",
     stack: ["LangGraph", "FastAPI", "PostgreSQL", "Pinecone"],
     status: "complete",
     featured: true,
