@@ -20,6 +20,7 @@ export type CaseStudy = {
   solution: string;
   architecture: string;
   architectureDiagram?: string;
+  architectureDiagramAlt?: string;
   stack: StackItem[];
   features: string[];
   challenges: Challenge[];

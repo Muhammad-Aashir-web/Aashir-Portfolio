@@ -15,6 +15,8 @@ export const callCenterAutomation: CaseStudy = {
   architecture:
     "Browser-captured audio streams over WebSocket to a Real-Time Transcription Agent (Groq Whisper Large v3 Turbo, with a local faster-whisper fallback). The transcript feeds a LangGraph graph invoked once per audio turn: Intent Classification (a fine-tuned DistilBERT model) branches into two paths — a sequential path where Knowledge Retrieval (ChromaDB + BM25 hybrid search, fused via Reciprocal Rank Fusion) feeds Response Suggestion (Groq Llama 3.3 70B, strictly grounded in retrieved content), since suggestions can't be generated without retrieved context; and a parallel path where Escalation Prediction (a locally trained XGBoost classifier reading VADER-derived sentiment trend) runs independently, since it only depends on intent and sentiment, not retrieval. Redis holds session state with a 1-hour TTL so per-turn graph invocations share context across a call. QA scoring and After-Call Work summarization are deliberately not LangGraph nodes — both need the complete transcript, which only exists once the call ends — so they're exposed as on-demand REST endpoints, manually triggered from the live dashboard, with After-Call reading the cached QA score rather than re-scoring. After-Call Work also fires a non-blocking n8n webhook, demonstrating a workflow-automation trigger pattern.",
   architectureDiagram: "/diagrams/call-center-architecture.png",
+  architectureDiagramAlt:
+    "Audio streams flow into live transcription, then split into intent classification, retrieval-grounded response suggestion, and escalation prediction, with session state shared in Redis and post-call QA and summary steps triggered after the call ends.",
 
   stack: [
     {

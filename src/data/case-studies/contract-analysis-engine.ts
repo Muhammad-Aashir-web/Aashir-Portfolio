@@ -14,6 +14,9 @@ export const contractAnalysisEngine: CaseStudy = {
 
   architecture:
     "The Document Ingestion Agent validates file type, extracts text (via PyMuPDF and Unstructured, with pytesseract and Pillow handling OCR for scanned documents), cleans the content, and chunks long contracts. The Clause Extraction Agent uses OpenAI (GPT-4o-mini) to identify clause types and normalize them into structured output. From there, the pipeline branches into three agents that run in parallel via a ThreadPoolExecutor — not LangGraph's native parallel branching — since Risk Assessment, Compliance, and Negotiation all depend only on the extracted clauses, not on each other: Risk Assessment scores clauses with deterministic heuristics first, then layers in LLM-based qualitative analysis; Compliance checks each clause against framework-specific requirement sets (GDPR, HIPAA, SOX, CCPA, and a general framework), grounded via RAG against Pinecone and Weaviate vector stores, producing a score plus recommendations; Negotiation generates rewritten clause language and an overall negotiation strategy for high-risk clauses. Once all three finish, the Audit Logging Agent finalizes the trace, recording start, completion, failure, and summary events for every pipeline stage. Celery workers handle the actual contract processing asynchronously so the FastAPI backend stays responsive during long LLM calls, with Redis coordinating task state. Two n8n workflows demonstrate downstream automation: one handles real DocuSign webhook events, the other models a Salesforce CRM sync pattern without being connected to a live Salesforce account.",
+  architectureDiagram: "/diagrams/contract-analysis-architecture.png",
+  architectureDiagramAlt:
+    "Sequential Document Ingestion flowing into Clause Extraction, then a ThreadPoolExecutor fan-out to Risk Assessment, Compliance, and Negotiation, before converging into Audit Logging.",
 
   stack: [
     {

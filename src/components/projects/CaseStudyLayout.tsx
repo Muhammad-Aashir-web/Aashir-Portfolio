@@ -69,7 +69,10 @@ export default function CaseStudyLayout({ study }: { study: CaseStudy }) {
           <div className="mt-4 overflow-hidden rounded-2xl border border-border bg-surface">
             <Image
               src={study.architectureDiagram}
-              alt="Call center audio streams into live transcription, then split into intent classification, retrieval-grounded response suggestion, and escalation prediction, with session state shared in Redis and post-call QA and summary steps triggered after the call ends."
+              alt={
+                study.architectureDiagramAlt ??
+                "Architecture diagram for the project pipeline."
+              }
               width={1600}
               height={900}
               className="h-auto w-full object-cover"
