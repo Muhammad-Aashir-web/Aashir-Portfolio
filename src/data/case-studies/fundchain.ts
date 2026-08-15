@@ -7,7 +7,7 @@ export const fundchain: CaseStudy = {
     "A milestone-driven crowdfunding platform on Solana, built with a three-person team as our Final Year Project — on-chain escrow, investor governance voting, AI-driven scam and risk scoring, personalized recommendations, and a support chatbot.",
 
   contribution:
-    "FundChain was a three-person Final Year Project built with Jawad Asif (group lead) and Mahnoor Haider. The platform itself — Solana escrow, milestone voting, KYC, wallet authentication, and deployment — was a team effort. My individual contribution was four modules: the AI-powered risk analysis and scam detection pipeline, the personalized investment recommendation engine, the platform support chatbot, and the tutorial/onboarding feedback system. The sections below focus on that work specifically.",
+    "FundChain was a three-person Final Year Project built with my two classmates. The platform itself — Solana escrow, milestone voting, KYC, wallet authentication, and deployment — was a team effort. My individual contribution was four modules: the AI-powered risk analysis and scam detection pipeline, the personalized investment recommendation engine, the platform support chatbot, and the tutorial/onboarding feedback system. The sections below focus on that work specifically.",
 
   problem:
     "Existing crowdfunding platforms release funds to creators up front with little investor protection, offer backers no meaningful role in how their money is used once pledged, and have no systematic way to flag likely scam campaigns before investors put money into them.",
